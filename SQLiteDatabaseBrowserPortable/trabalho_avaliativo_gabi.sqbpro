@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="trabalho_avaliativo_gabi.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1164"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="hospede" custom_title="0" dock_id="1" table="4,7:mainhospede"/><dock_state state="000000ff00000000fd00000001000000020000000000000000fc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000ffffffff0000011800ffffff000000000000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1*">DELETE FROM hospede;
+INSERT INTO hospede (nome, cpf, telefone, email) VALUES ('Ana', '12345678900', '38999990001', 'ana@email.com');
+INSERT INTO hospede (nome, cpf, telefone, email) VALUES ('Bruno', '98765432100', '38999990002', 'bruno@email.com');
+INSERT INTO hospede (nome, cpf, telefone, email) VALUES ('Carlos', '11122233344', '38999990003', 'carlos@email.com');
+INSERT INTO hospede (nome, cpf, telefone, email) VALUES ('Daniela', '55566677788', '38999990004', 'daniela@email.com');
+INSERT INTO hospede (nome, cpf, telefone, email) VALUES ('Eduarda', '99988877766', '38999990005', 'eduarda@email.com');
+UPDATE hospede SET nome = 'Ana Clara' WHERE email = 'ana@email.com';
+UPDATE hospede SET telefone = '38988880001' WHERE email = 'bruno@email.com';
+UPDATE hospede SET email = 'novo@email.com' WHERE email = 'carlos@email.com';
+UPDATE hospede SET nome = 'Dani' WHERE email = 'daniela@email.com';
+UPDATE hospede SET cpf = '00011122233' WHERE email = 'eduarda@email.com';
+SELECT * FROM hospede;
+DELETE FROM hospede WHERE email = 'ana@email.com';
+DELETE FROM hospede WHERE email = 'bruno@email.com';
+DELETE FROM hospede WHERE email = 'novo@email.com';
+DELETE FROM hospede WHERE email = 'daniela@email.com';
+DELETE FROM hospede WHERE email = 'eduarda@email.com';
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

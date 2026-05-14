@@ -1,0 +1,45 @@
+import customtkinter # importa a biblioteca customtkinter
+
+customtkinter.set_appearance_mode("white") # método utilizado para colocar o modo de cores de fundo
+
+app = customtkinter.CTk() # app se torna a tela principal, o aplicativo
+app.geometry("800x800") # aqui chamamos o método geometria onde colocamos a resolução do app
+app.title("My program") # aqui colocamos o título do app, o nome que fica na janela quando o mesmo é executado
+
+
+
+
+def button_click_event(): #função que será chamada através de um evento, evento de clique
+    
+    parametro = input_conta.get() # método get é utilizado para puxar o valor que está na caixinha de inserção de dados do app
+    
+    try: #try é um comando para tentar executar um bloco de comandos que é o logo abaixo.
+        
+        resultado = str(eval(parametro)) # aqui temos a variável resultado que recebe uma string que é o resultado da operação da função eval. OBS: CUIDADO AO USAR EVAL, EVITE AO MÁXIMO, AQUI FOI USADO PARA FINS EDUCACIONAIS, EVAL EXECUTA DE MODO LITERAL O COMANDO
+        
+    except: #except é onde o bloco de comandos será excutado caso o try ocorra algum erro
+        resultado = "Erro na conta" #variável resultado aqui recebe o texto "Erro na conta"
+
+    resultado_label.configure(text=resultado) #aqui chamamos um item da tela, que é de nome "resultado_label" e usamos o método .configure para mudar um atributo do mesmo, que no caso é o text.
+
+
+label = customtkinter.CTkLabel(app,text="Seja bem vindo à calculadora",fg_color="transparent") #aqui label é uma variável que se torna um objeto com label através do comando CTKLabel, os parâmetros da função são atributos que vai conter no item como: app = diz onde que esta label irá ser implementada, text = é o texto que vai aparecer, fg_color = é a cor do item, se é transparente...  nesses atributos é possível colocar bordas, estilizar mais. Para isto leia mais a documentação do mesmo
+
+label.pack() # aqui é como posicionamos o label, após criar o mesmo na opção acima, precisamos posicionar o mesmo. o ,pack posiciona de forma automática e seguindo a ordem.
+
+
+input_conta = customtkinter.CTkEntry(app,placeholder_text="Digite a conta que deseja fazer") # aqui é a mesma coisa que o label porém agora é um Entry ou seja, uma caixa de entrada de dados, um input. Que tem os atributos igual o de cima
+
+input_conta.pack() # aqui posicionamos de forma automática, lembrando que o .pack por ser o segundo ele será colocado abaixo do label acima.
+
+
+resultado_label = customtkinter.CTkLabel(app,text="") # aqui é o mesmo conceito porém só tem menos atributo, um atributo obrigatório em todos (você deve ter percebido), é o app, o nome da tela que o item irá ser colocado. 
+
+resultado_label.pack() #aqui é o pocisionamento automático, por ele ser o 3º item ele ficará abaixo do input_conta
+
+
+button = customtkinter.CTkButton(app,text="Calcular",command=button_click_event  ) #aqui é um botão mais segue a mesma lógica dos elementos acima
+
+button.pack() #...
+
+app.mainloop() # este é comando que deve ser executado por último, ele dita que irá abrir a tela do app e executar o mesmo.

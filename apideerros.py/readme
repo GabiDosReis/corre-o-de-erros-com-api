@@ -1,0 +1,20 @@
+# Python Error AI Helper
+
+Aplicação em Python com CustomTkinter + IA da Groq.
+
+## Funções
+- Explica erros Python
+- Analisa traceback
+- Interface moderna
+- IA integrada
+
+## Tecnologias
+- Python
+- CustomTkinter
+- Requests
+- Groq API
+
+## Instalação
+
+```bash
+pip install -r requirements.txt
