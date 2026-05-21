@@ -1,0 +1,143 @@
+# 🚗 Sistema de Cadastro de Veículos
+
+Este projeto é um programa simples em Python que realiza o cadastro de veículos por meio de um menu interativo no terminal.
+
+## 📌 Funcionalidades
+
+- Exibir menu com opções:
+  - Cadastrar veículo
+  - Sair do sistema
+- Validar modelo do veículo
+- Validar placa
+- Validar ano do veículo
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- Python 3
+- Estrutura `match case`
+- Funções
+- Validações com `if/else`
+
+---
+
+## ▶️ Como executar
+
+1. Instale o Python em seu computador.
+2. Copie o código para um arquivo chamado:
+
+```bash
+veiculos.py
+```
+
+3. Execute o arquivo:
+
+```bash
+python veiculos.py
+```
+
+---
+
+## 📋 Funcionamento
+
+Ao iniciar o programa, será exibido o menu:
+
+```text
+1-Cadastrar
+2-Sair
+```
+
+### Cadastro
+
+O usuário deverá informar:
+
+- Modelo do veículo
+- Placa
+- Ano do veículo
+
+### Validações realizadas
+
+#### Modelo
+- Não pode estar vazio.
+
+Exemplo:
+
+```text
+Modelo: Gol
+Modelo aprovado
+```
+
+ou
+
+```text
+Modelo:
+Modelo inválido
+```
+
+---
+
+#### Placa
+- O programa verifica se contém apenas letras usando `.isalpha()`.
+
+Exemplo:
+
+```text
+Placa: ABCDEF
+Placa válida
+```
+
+```text
+Placa: ABC123
+Placa inválida
+```
+
+---
+
+#### Ano
+- O ano informado não pode ser maior que **2026**.
+
+Exemplo:
+
+```text
+ano: 2020
+Ano correto
+```
+
+```text
+ano: 2030
+Ano inválido
+```
+
+---
+
+## 📂 Estrutura do Código
+
+```text
+menu()
+ └── cadastrar_veiculo()
+      └── validar_ano()
+```
+
+- `menu()` → Exibe as opções do sistema.
+- `cadastrar_veiculo()` → Coleta e valida os dados do veículo.
+- `validar_ano()` → Verifica se o ano informado é válido.
+
+---
+
+## ⚠️ Observações
+
+Atualmente:
+- A validação da placa aceita apenas letras.
+- Não há armazenamento dos veículos cadastrados.
+- O menu executa apenas uma vez.
+
+---
+
+## 👨‍💻 Autor
+
+Projeto desenvolvido para prática de:
+- Funções em Python
+- Estruturas condicionais
+- Entrada de dados
+- Organização de código
